@@ -14,6 +14,7 @@ export function Main() {
   const { data, loading, error } = useCurrency(from);
 
   const handleSwap = () => {
+    if(!amount && amount !== 0) return;
     const fromText = from;
     const toText = to;
     const fromAmt = amount;
@@ -25,7 +26,7 @@ export function Main() {
   };
 
   const convertCurrency = (): void => {
-    if (to in data) setConvertetAmount(amount * data[to]);
+    if ((amount || amount === 0) && to in data) setConvertetAmount(amount * data[to]);
   };
 
   useEffect(() => {
