@@ -11,7 +11,11 @@ export function AmountField({ lableText, amount, onAmountChange, disabled }: Amo
   const id = useId();
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!disabled) {
-      let amt = parseInt(e.target.value);
+      if(e.target.value.length===0){
+            onAmountChange(NaN);
+            return;
+      }
+      let amt = parseFloat(e.target.value);
       if(amt < 0) amt = 0;
       onAmountChange(amt);
     }
