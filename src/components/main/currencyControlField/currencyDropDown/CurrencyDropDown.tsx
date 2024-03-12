@@ -6,13 +6,13 @@ type CurrencyDropDownProps = {
 }
 export function CurrencyDropDown({ loading, selectedCurrency, onCurrencyChange, currencyOptions }: CurrencyDropDownProps) {
   return (
-    <div className="relative">
+    <div className="relative text-center">
+      <h4 className="text-sm md:text-md text-gray-400 mb-2 font-semibold">Currency Type</h4>
       <select
         disabled={loading !== false}
         value={selectedCurrency}
         onChange={(e) => onCurrencyChange(e.target.value)}
-        className={`w-16 px-2 py-1 h-8 border border-gray-400 rounded-md shadow-sm sm:text-sm ${loading !== false && "animate-pulse"
-          }`}
+        className={`w-20 px-3 py-2 h-10 border border-gray-300 bg-white rounded-md shadow-sm sm:text-sm focus:outline-none ${loading !== false && "animate-pulse"}`}
       >
         {currencyOptions.map((currencyOption) => (
           <option key={currencyOption} value={currencyOption}>
@@ -21,6 +21,5 @@ export function CurrencyDropDown({ loading, selectedCurrency, onCurrencyChange, 
         ))}
       </select>
     </div>
-
   )
 }

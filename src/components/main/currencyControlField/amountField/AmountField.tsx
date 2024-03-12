@@ -11,19 +11,21 @@ export function AmountField({ lableText, amount, onAmountChange, disabled }: Amo
   const id = useId();
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!disabled) {
-      onAmountChange(parseInt(e.target.value))
+      let amt = parseInt(e.target.value);
+      if(amt < 0) amt = 0;
+      onAmountChange(amt);
     }
   }
   return (
-    <div className='flex justify-center gap-2 items-center'>
-      <label htmlFor={id} className="text-sm">{lableText}</label>
+    <div className='flex flex-col'>
+      <label htmlFor={id} className="text-sm md:text-md text-gray-400 mb-2 font-semibold">{lableText}</label>
       <input
         type={disabled ? "text" : "number"}
         name={lableText}
         id={id}
         value={amount}
         onChange={handleOnChange}
-        className={`w-56 h-8 px-2 py-1 border border-gray-300 rounded-md shadow-sm text-sm focus:outline-none focus:border-blue-500 ${disabled && 'cursor-not-allowed'}`}
+        className={`w-44 md:w-52 px-2 py-1 h-10 border border-gray-300 bg-white rounded-md shadow-sm text-sm focus:outline-none ${disabled && 'cursor-not-allowed'}`}
       />
     </div>
   )

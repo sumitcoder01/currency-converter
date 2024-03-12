@@ -14,7 +14,7 @@ type CurrencyControlFieldProps = {
 
 export function CurrencyControlField({loading ,lableText, amount, onAmountChange, disabled, selectedCurrency, onCurrencyChange, currencyOptions }: CurrencyControlFieldProps) {
   return (
-    <div className="flex justify-center gap-2 mx-1">
+    <div className="flex justify-center gap-16 mx-1">
       <AmountField lableText={lableText} amount={amount} onAmountChange={onAmountChange} disabled={disabled} />
       <CurrencyDropDown loading={loading} selectedCurrency={selectedCurrency} onCurrencyChange={onCurrencyChange} currencyOptions={currencyOptions} />
     </div>

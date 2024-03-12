@@ -3,6 +3,7 @@ import { useCurrency } from "../../hooks/currencyHook/useCurrency";
 import { CurrencyControlField } from "./currencyControlField/CurrencyControlField";
 import { SwapField } from "./swapField/SwapField";
 import { ConvertButton } from "./convertButton/ConvertButton";
+import { ErrorMessage } from "./error/ErrorMessage";
 
 export function Main() {
   const [from, setFrom] = useState<string>("inr");
@@ -10,7 +11,7 @@ export function Main() {
   const [convertetAmount, setConvertetAmount] = useState<number>(0);
   const [to, setTo] = useState<string>("usd");
   const [options, setOptions] = useState<string[]>([]);
-  const { data, loading } = useCurrency(from);
+  const { data, loading, error } = useCurrency(from);
 
   const handleSwap = () => {
     const fromText = from;
@@ -34,7 +35,8 @@ export function Main() {
   }, [loading, data]);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 bg-white px-10 py-10 rounded-md">
+    <div className="flex flex-col justify-center items-center gap-6 bg-[#F9F6EE] px-7 py-9 rounded-md">
+      {error && <ErrorMessage error={error} />}
       <CurrencyControlField
         loading={loading}
         lableText={"From"}

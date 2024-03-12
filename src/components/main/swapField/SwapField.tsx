@@ -5,7 +5,7 @@ type SwapFieldProps = {
 }
 export function SwapField({ swap }: SwapFieldProps) {
   return (
-    <button  className='flex items-center justify-center px-3 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300'
+    <button  className='flex items-center justify-center px-3 py-2 rounded-lg font-bold bg-purple-600 text-white hover:bg-purple-700 focus:outline-none'
       onClick={swap}
     >
       <span className="mr-2">Swap</span>

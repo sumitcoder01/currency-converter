@@ -1,30 +1,65 @@
-# Currency convert - convert your  currency into another currency 
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Currency Converter is a React application designed to convert one currency to another.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+Currency Converter is a user-friendly web application that allows users to easily convert currencies. The application fetches real-time exchange rates and provides a seamless experience for users to perform currency conversions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Real-time Conversion:** Get the latest exchange rates for accurate currency conversion.
+- **User-Friendly Interface:** Intuitive design for effortless navigation and usage.
+- **Multiple Currencies:** Support for a wide range of currencies for conversion.
+- **Responsive:** The application is responsive, ensuring a consistent experience across devices.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sumitcoder01/currency-converter.git
+cd currency-converter
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+1. Start the development server:
+
+```bash
+npm start
+```
+
+2. Open your browser and navigate to `http://localhost:5173` to use the Currency Converter.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions, feel free to open an [issue](https://github.com/sumitcoder01/currency-converter/issues) or create a [pull request](https://github.com/sumitcoder01/currency-converter/pulls).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+Feel free to customize it according to the specifics of your project.
